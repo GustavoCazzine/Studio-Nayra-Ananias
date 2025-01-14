@@ -1,0 +1,94 @@
+/* Media Query para Desktop */
+@media only screen and (min-width: 1024px) and (max-width: 1366px) {
+    .container__subtitulo{
+        display: none;
+    }
+
+    .container__subtitulo__desktop{
+        display: block;
+    }
+
+    .container__subtitulo-h3__desktop{
+        font-size: 1.5rem;
+        padding: 0 2em;
+    }
+
+    .cabecalho__logo {
+        width: 200px;
+    }
+    
+    .pagina__geral {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide a tela em duas colunas */
+        height: 100vh;
+    }
+
+
+    .secao-principal {
+        height: 100vh; /* Seção principal fixa e cheia */
+        grid-column: 1; /* Ocupa a primeira coluna */
+    }
+
+    .secao-principal__conteudo {
+        text-align: center;
+    }
+
+    .secao-conteudo {
+        overflow: auto;
+
+        padding: 4em;
+    }
+
+    .feedback-container {
+        width: 100%; /* Ocupa 100% da largura da coluna */
+        max-width: 600px; /* Tamanho máximo do container */
+        margin: 1em auto; /* Centraliza o feedback */
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        padding: 1.5em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .container__conteudo {
+        margin: 1rem auto;
+    }
+
+    .container__conteudo__curso {
+        margin-bottom: 2rem;
+    }
+
+    .container__conteudo__link {
+        text-transform: uppercase;
+        padding: 0.2em 1em;
+        font-size: 1.2em;
+    }
+
+    .secao-principal__foto {
+        max-width: 800px;
+    }
+    
+    .secao-principal__titulo {
+        bottom: 5%;
+        font-size: 4em;
+    }
+
+    .container__conteudo__titulo {
+        font-size: 2vw; /* Escala adaptativa para telas menores */
+    }
+
+    .secao-principal__fundo__paragrafo{
+        font-size:170px;
+        margin: 0 5%;
+        padding: 5em 0;
+    }
+    
+    .secao-principal__fundo__paragrafo2{
+        font-size:150px;
+        margin: auto;
+    }
+
+
+    .swiper, .mySwiper, .swiper-pagination, .swiper-button-prev, .swiper-button-next, .swiper-wrapper, .swiper-slide, .whatsapp-button {
+        display: none;
+    }
+}

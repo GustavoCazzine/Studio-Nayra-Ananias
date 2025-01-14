@@ -1,0 +1,92 @@
+/* Estilos para tablets (768px a 1024px) */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .container__subtitulo__desktop{
+        display: none;
+    }
+
+    .secao-principal {
+        flex-direction: row; /* Elementos lado a lado */
+        padding: 8em 2em 0em; /* Mais espaço */
+    }
+
+    #fundo01, #fundo02 {
+        width: 50%; /* Dividido igualmente */
+    }
+
+    .secao-principal__conteudo {
+        margin-left: 2em;
+    }
+
+    .secao-principal__foto {
+        max-width: 400px; /* Maior para tablets */
+    }
+
+    .secao-principal__titulo {
+        font-size: 2rem; /* Texto maior */
+    }
+
+    .container__subtitulo {
+        font-size: 1.25rem;
+        padding: 2em;
+    }
+
+    .secao-conteudo {
+        gap: 3em; /* Maior espaçamento entre os elementos */
+        padding: 3em 2em;
+    }
+
+    .container__conteudo {
+        width: 80%; /* Reduz a largura para criar margens */
+        padding: 2% 3%;
+    }
+
+    .container__conteudo__titulo {
+        font-size: 2rem; /* Escala maior */
+    }
+
+    .container__conteudo__link {
+        font-size: 1.25rem; /* Texto mais legível */
+        padding: .5em 2em;
+    }
+
+
+    /* Carrossel */
+    /* Estilos do container de feedback */
+    .feedback-container {
+        width: 90%;
+        max-width: 600px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.342);
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 1.5em;
+        
+    }
+    
+    /* Estilo Individual do Feedback */
+    .feedback {
+        display: flex;
+        flex-direction: column;
+        gap: 1em;
+        padding: 1em;
+    }
+
+
+    /* Fundo */
+    .secao-principal__fundo__paragrafo {
+        font-size: 115px;
+        font-family: var(--fonte-titulo);
+        font-weight: 900;
+        line-height: 1.2; /* Ajusta o espaçamento entre linhas */
+        text-transform: uppercase;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+
+    #fundo01 {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+    }
+
+}
