@@ -304,11 +304,36 @@ h3 {
 }
 
 /* ****** Carrossel */
+/* Contêiner interativo para capturar cliques fora dos cards */
+.swiper-wrapper-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    cursor: grab; /* Indica que o contêiner pode ser arrastado */
+}
+
+.swiper-wrapper-container:active {
+    cursor: grabbing; /* Indica o estado durante o arrasto */
+}
+
+.swiper-wrapper-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+
 .swiper {
     width: 90%;
     margin: 2em auto;
-    padding: 2em 1em; /* Centralização melhorada */
+    padding: 2em 1em;
     overflow-x: hidden;
+    min-height: 300px; /* Defina um mínimo razoável */
 }
 
 .swiper-slide {
@@ -320,14 +345,15 @@ h3 {
 
 /* Estilos do container de feedback */
 .feedback-container {
-    width: 90%;
-    max-width: 400px;
-    margin: 0 auto;
+    height: auto; /* Defina o máximo esperado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(255, 255, 255, 0.397);
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 1.5em;
-    
 }
 
 /* Estilo Individual do Feedback */
@@ -378,7 +404,7 @@ h3 {
 }
 
 .client-comment {
-    font-size: 0.9rem;
+    font-size: 0.7rem;
     color: var(--cor-paragrafos);
     line-height: 2em;
     text-align: justify;

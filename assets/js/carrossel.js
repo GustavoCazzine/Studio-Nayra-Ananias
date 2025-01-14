@@ -9,8 +9,18 @@ const swiper = new Swiper('.swiper', {
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
-    },
+    },  
 });
+
+const swiperContainer = document.querySelector('.swiper-wrapper-container');
+
+swiperContainer.addEventListener('click', (event) => {
+    // Verifica se o clique ocorreu fora dos cards
+    if (!event.target.closest('.feedback-container')) {
+        swiper.slideNext(); // Avança para o próximo slide
+    }
+});
+
 
 
 
