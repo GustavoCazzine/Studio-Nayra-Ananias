@@ -313,10 +313,6 @@ h3 {
     cursor: grab; /* Indica que o contêiner pode ser arrastado */
 }
 
-.swiper-wrapper-container:active {
-    cursor: grabbing; /* Indica o estado durante o arrasto */
-}
-
 .swiper-wrapper-container::before {
     content: '';
     position: absolute;
@@ -415,6 +411,7 @@ h3 {
 
 .swiper-wrapper {
     margin-bottom: 3em;
+    align-items: center;
 }
 
 
