@@ -10,6 +10,10 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-pagination',
         clickable: true,
     },  
+    autoplay: {
+        delay: 3000, // Tempo em milissegundos (5 segundos)
+        disableOnInteraction: false, // Continua mesmo após interação do usuário
+    },
 });
 
 const swiperContainer = document.querySelector('.swiper-wrapper-container');
