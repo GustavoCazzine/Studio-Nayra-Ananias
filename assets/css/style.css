@@ -81,8 +81,10 @@ h3 {
 }
 
 .cabecalho__logo {
-    width: 6em;
-    background-color: transparent; /* Faz o fundo do logo transparente, se necessário */
+    width: 6em; /* Tamanho responsivo baseado no tamanho da fonte */
+    height: auto; /* Mantém a proporção da imagem */
+    background-color: transparent; /* Garantir fundo transparente, se necessário */
+    display: block; /* Remove qualquer espaço extra abaixo da imagem */
 }
 
 
@@ -156,7 +158,7 @@ h3 {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 35%; /* Ajuste para garantir cobertura completa */
+    height: 25%; /* Ajuste para garantir cobertura completa */
     background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, var(--cor-alternativa) 100%); /* Gradiente ajustado */
     z-index: 5;
     pointer-events: none; /* Impede que interfira na interação do usuário */
@@ -164,11 +166,13 @@ h3 {
 
 .secao-principal__foto {
     width: 80%; /* Remover o width: 100% */
-    max-width: 400px;
     background-color: transparent;
     position: relative;
     z-index: 2;
     filter: drop-shadow(0px 5px 25px rgba(0, 0, 0, .3));
+    aspect-ratio: 1 / 1; /* Mantém proporção de 1:1 */
+    object-fit: cover; /* Garante que a imagem se ajuste sem distorção */
+    display: block; /* Evita espaço indesejado ao redor da imagem */
 }
 
 
@@ -190,8 +194,6 @@ h3 {
     text-align: center; 
     font-weight: 100;
 }
-
-
 
 
 
@@ -251,11 +253,12 @@ h3 {
 }
 
 .container__conteudo img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 2px solid var(--cor-titulo);
-    object-fit: cover; /* Garante que a imagem mantenha proporção */
+    width: 100%; /* Escala a largura da imagem conforme o contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Arredonda os cantos */
+    border: 2px solid var(--cor-secundaria); /* Define uma única borda */
+    object-fit: cover; /* Garante que a imagem seja ajustada corretamente */
+    display: block; /* Remove o espaçamento inferior padrão */
 }
 
 .container__conteudo img{
@@ -468,8 +471,11 @@ h3 {
 
 
 .whatsapp-button img {
-    width: 70%;
-    height: auto;
+    width: 70%; /* Responsivo: ajusta a largura ao contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    max-width: 100px; /* Limita o tamanho máximo da imagem */
+    display: block; /* Remove espaçamento indesejado */
+    margin: 0 auto; /* Centraliza no contêiner, se necessário */
 }
 
 .whatsapp-button.visible {

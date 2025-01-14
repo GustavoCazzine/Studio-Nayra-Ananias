@@ -71,6 +71,9 @@
         padding: 1em;
     }
 
+    .client-comment{
+        font-size: 1rem;
+    }
 
     /* Fundo */
     .secao-principal__fundo__paragrafo {
@@ -87,6 +90,11 @@
         display: flex;
         justify-content: center; /* Centraliza horizontalmente */
         align-items: center; /* Centraliza verticalmente */
+    }
+
+    .secao-principal__foto {
+        width: 500px;
+        height: 500px;
     }
 
 }
