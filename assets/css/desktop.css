@@ -34,18 +34,7 @@
 
     .secao-conteudo {
         overflow: auto;
-
         padding: 10em;
-    }
-
-    .feedback-container {
-        width: 100%; /* Ocupa 100% da largura da coluna */
-        max-width: 600px; /* Tamanho máximo do container */
-        margin: 1em auto; /* Centraliza o feedback */
-        background-color: rgba(255, 255, 255, 0.9);
-        border-radius: 8px;
-        padding: 1.5em;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .container__conteudo {
@@ -63,12 +52,13 @@
     }
 
     .secao-principal__foto {
-        max-width: 800px;
+        transform: scale(1.5);
     }
     
     .secao-principal__titulo {
         bottom: 5%;
         font-size: 4em;
+        position: absolute;
     }
 
     .container__conteudo__titulo {
@@ -81,9 +71,56 @@
         padding: 5em 0;
     }
     
+    /* Carrossel */
+    .swiper {
+        width: 80%; /* Reduz a largura para centralizar melhor em telas maiores */
+        padding: 4em 2em; /* Aumenta o padding para mais espaçamento */
+        min-height: 62.5em; /* Aumenta a altura mínima para destacar mais o conteúdo */
+        
+    }
 
-    .swiper, .mySwiper, .swiper-pagination, .swiper-button-prev, .swiper-button-next, .swiper-wrapper, .swiper-slide, .whatsapp-button {
-        display: none;
+    .swiper-slide {
+        display: flex;
+        justify-content: center; /* Centraliza os cards horizontalmente dentro do slide */
+        align-items: center; /* Centraliza os cards verticalmente dentro do slide */
+        height: 100%; /* Garante que o slide ocupe toda a altura disponível */
+    }
+
+    .feedback-container {
+        max-width: 100%; /* Aumenta o tamanho máximo do container */
+        padding: 3em; /* Aumenta o padding interno */
+        gap: 1.5em; /* Ajusta o espaçamento entre os elementos */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Aumenta a intensidade da sombra */
+        border-radius: 12px; /* Torna os cantos mais arredondados */
+    }
+
+    /* Ajuste para imagem do perfil */
+    .profile-photo {
+        width: 80px; /* Aumenta o tamanho da imagem para telas maiores */
+        height: 80px; /* Mantém o formato circular */
+    }
+
+    /* Nome do cliente */
+    .client-name {
+        font-size: 1.4rem; /* Aumenta o tamanho da fonte */
+        margin-top: 0.8em; /* Adiciona mais espaço acima do nome */
+    }
+
+    /* Comentário do cliente */
+    .client-comment {
+        font-size: 1.2rem; /* Aumenta o tamanho da fonte */
+        line-height: 1.8em; /* Melhora a legibilidade com maior espaçamento */
+    }
+
+    /* Posição e espaçamento das bolinhas de paginação */
+    .swiper-pagination {
+        bottom: -50px; /* Move a paginação um pouco mais para baixo */
+        margin-top: 30px; /* Adiciona mais espaço acima */
+    }
+
+    .swiper-wrapper {
+        margin-bottom: 2.5em; /* Aumenta o espaçamento inferior */
+        align-items: center; /* Garante o alinhamento centralizado */
     }
 
 }

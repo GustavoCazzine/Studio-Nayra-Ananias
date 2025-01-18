@@ -6,7 +6,7 @@
 
     .secao-principal {
         flex-direction: row; /* Elementos lado a lado */
-        padding: 8em 2em 0em; /* Mais espaço */
+        padding: 5em 2em 0em; /* Mais espaço */
     }
 
     #fundo01, #fundo02 {
@@ -51,27 +51,27 @@
 
 
     /* Carrossel */
-    /* Estilos do container de feedback */
-    .feedback-container {
-        width: 90%;
-        max-width: 600px;
-        margin: 0 auto;
-        background-color: rgba(255, 255, 255, 0.342);
-        border-radius: 8px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 1.5em;
-        
-    }
-    
-    /* Estilo Individual do Feedback */
-    .feedback {
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        padding: 1em;
+    .swiper {
+        width: 80%;
+        padding: 3em 2em;
     }
 
-    .client-comment{
+    .feedback-container {
+        flex-direction: row; /* Organiza o conteúdo horizontalmente */
+        align-items: flex-start;
+        padding: 2em;
+    }
+
+    .feedback__alinhamento {
+        justify-content: center; /* Centraliza a foto e o nome */
+    }
+
+    .feedback-content {
+        text-align: left; /* Alinha o texto à esquerda */
+        padding: 0 1.5em;
+    }
+
+    .client-comment {
         font-size: 1rem;
     }
 
