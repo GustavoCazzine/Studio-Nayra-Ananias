@@ -135,13 +135,3 @@ function debounce(func, wait) {
         timeout = setTimeout(() => func.apply(this, args), wait);
     };
 }
-
-document.addEventListener("scroll", debounce(() => {
-    const socialBar = document.getElementById("socialBar");
-
-    if (window.scrollY > 100) {
-        socialBar.classList.add("visible");
-    } else {
-        socialBar.classList.remove("visible");
-    }
-}, 100)); // Ajuste o tempo (em milissegundos) conforme necessário
