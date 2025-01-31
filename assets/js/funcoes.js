@@ -123,3 +123,12 @@ const swiper = new Swiper('.swiper', {
         disableOnInteraction: false, // Continua mesmo após interação do usuário
     },
 });
+
+document.addEventListener("scroll", () => {
+    const socialBar = document.getElementById("socialBar");
+
+    if (window.scrollY > 100) {
+      // Adiciona a classe para exibir a barra ao rolar
+        socialBar.classList.add("visible");
+    }
+});
