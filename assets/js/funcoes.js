@@ -131,4 +131,5 @@ document.addEventListener("scroll", () => {
       // Adiciona a classe para exibir a barra ao rolar
         socialBar.classList.add("visible");
     }
+
 });
