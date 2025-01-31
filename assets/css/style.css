@@ -481,9 +481,10 @@ h3 {
     justify-content: center;
     cursor: pointer;
     transform: translateX(0);
-    transition: transform 0.5s ease-in-out, right .5s ease-in-out; /* Transição suave */
+    transition: transform 0.5s ease-in-out; /* Apenas transform para melhor desempenho */
+    will-change: transform; /* Informa ao navegador que o elemento será animado */
+    backdrop-filter: blur(2px);
 }
-
 
 .whatsapp-button img {
     width: 70%; /* Responsivo: ajusta a largura ao contêiner */
@@ -494,13 +495,11 @@ h3 {
 }
 
 .whatsapp-button.visible {
-    right: 20px; /* Volta para dentro da tela */
-    transform: translateX(0); /* Garante que esteja no local correto */
+    transform: translateX(-120px); /* Move para dentro da tela */
 }
 
 .whatsapp-button.hidden {
-    right: -10px; /* Sai para fora da tela */
-    transform: translateX(100%);
+    transform: translateX(100%); /* Sai para fora da tela */
 }
 
 /* Tooltip do WhatsApp */
@@ -517,8 +516,9 @@ h3 {
     opacity: 0;
     visibility: hidden;
     transform: translateY(10px);
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out, visibility 0.5s ease-in-out;
     white-space: nowrap;
+    will-change: opacity, transform, visibility; /* Informa ao navegador que o elemento será animado */
 }
 
 /* Triângulo do balão de fala */
@@ -650,11 +650,11 @@ h3 {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-size: 14px;
-    color: #333;
+    color: var(--cor-botoes);
     font-weight: bold;
     cursor: pointer;
 }
 
 .newsletter:hover {
-    color: #007bff;
+    color: var(--cor-titulo);
 }
