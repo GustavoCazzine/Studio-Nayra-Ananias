@@ -650,11 +650,11 @@ h3 {
     writing-mode: vertical-rl;
     text-orientation: mixed;
     font-size: 14px;
-    color: var(--cor-botoes);
+    color: var(--cor-titulo);
     font-weight: bold;
     cursor: pointer;
 }
 
 .newsletter:hover {
-    color: var(--cor-titulo);
+    color: var(--cor-botoes);
 }
