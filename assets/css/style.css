@@ -1,19 +1,19 @@
 @font-face {
-    font-family: 'Old Standard TT';
-    src: url(/assets/fonts/Old_Standard_TT/OldStandardTT-Bold.ttf) format('truetype');
+    font-family: 'PlayfairDisplay bold';
+    src: url('../fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff2') format('woff2'),
+        url('../fonts/PlayfairDisplay/PlayfairDisplay-Bold.woff') format('woff');
 }
 
 @font-face {
-    font-family: 'Open Sans';
-    src: url(/assets/fonts/Open_Sans/static/OpenSans-Regular.ttf) format('truetype');
+    font-family: 'Old_Standard_TT';
+    src: url('../fonts/Old_Standard_TT/OldStandardTT-Bold.woff2') format('woff2'),
+    url('../fonts/Old_Standard_TT/OldStandardTT-Bold.woff') format('woff');
 }
-
 @font-face {
-    font-family: 'Open Sans bold';
-    src: url(/assets/fonts/Open_Sans/static/OpenSans-Bold.ttf) format('truetype');
+    font-family: 'Open_Sans';
+    src: url('../fonts/Open_Sans/OpenSansCondensed-Bold.woff2') format('woff2'),
+        url('../fonts/Open_Sans/OpenSansCondensed-Bold.woff') format('woff');
 }
-
-
 
 /* Reset básico */
 * {
@@ -43,9 +43,9 @@
     --cor-neutra: #555555;  /* Texto ou Gradientes Neutros */
 
 
-    --fonte-titulo: "Old Standard TT", serif;
-    --fonte-paragrafos: "Open Sans", serif;
-    --fonte-subtitulo: "Open Sans bold", serif;
+    --fonte-titulo: "Julius Sans One", serif;
+    --fonte-paragrafos: "PlayfairDisplay bolds", serif;
+    --fonte-subtitulo: "Open_Sans", serif;
 }
 
 html, body, main {
