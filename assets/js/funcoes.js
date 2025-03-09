@@ -42,10 +42,10 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', addScrollListener);
 });
 
-//Botão do WhatsApp
+// Botão do WhatsApp
 function debounce(func, wait) {
     let timeout;
-    return function(...args) {
+    return function (...args) {
         clearTimeout(timeout);
         timeout = setTimeout(() => func.apply(this, args), wait);
     };
@@ -70,9 +70,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
                     setTimeout(() => {
                         whatsappTooltip.classList.remove('visible', 'fade-out');
-                    }, 500);
-                }, 2000);
+                    }, 300); // Tempo de espera antes de remover o tooltip
+                }, 2000); // Tempo de exibição do tooltip
             }
+        } else {
+            whatsappButton.classList.remove('visible');
+            whatsappButton.classList.add('hidden');
         }
     }
 
